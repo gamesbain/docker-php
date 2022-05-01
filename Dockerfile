@@ -1,4 +1,4 @@
-FROM alpine:3.15
+FROM alpine
 
 # Install php8
 RUN apk --update add php8
@@ -70,5 +70,5 @@ COPY src/ /var/www/
 RUN rm -rf /var/cache/apk
 RUN rm -rf /root/.composer/cache
 
-EXPOSE 8080
+EXPOSE 80
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
