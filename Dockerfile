@@ -71,4 +71,5 @@ RUN rm -rf /var/cache/apk
 RUN rm -rf /root/.composer/cache
 
 EXPOSE 80
+EXPOSE 443
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
